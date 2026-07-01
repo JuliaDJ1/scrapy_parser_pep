@@ -26,3 +26,5 @@ FEEDS = {
         },
     },
 }
+
+PEP_URL = 'https://peps.python.org/'

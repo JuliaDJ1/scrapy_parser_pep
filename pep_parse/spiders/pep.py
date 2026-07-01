@@ -3,12 +3,13 @@ from urllib.parse import urljoin
 import scrapy
 
 from pep_parse.items import PepParseItem
+from pep_parse.settings import PEP_URL
 
 
 class PepSpider(scrapy.Spider):
     name = 'pep'
     allowed_domains = ['peps.python.org']
-    start_urls = ['https://peps.python.org/']
+    start_urls = [PEP_URL]
 
     def parse(self, response):
         rows = response.css('table.pep-zero-table tr')
