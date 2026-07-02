@@ -3,12 +3,12 @@ from urllib.parse import urljoin
 import scrapy
 
 from pep_parse.items import PepParseItem
-from pep_parse.settings import PEP_URL
+from pep_parse.settings import ALLOWED_DOMAINS, PEP_URL
 
 
 class PepSpider(scrapy.Spider):
     name = 'pep'
-    allowed_domains = ['peps.python.org']
+    allowed_domains = ALLOWED_DOMAINS
     start_urls = [PEP_URL]
 
     def parse(self, response):

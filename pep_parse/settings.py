@@ -28,3 +28,5 @@ FEEDS = {
 }
 
 PEP_URL = 'https://peps.python.org/'
+
+ALLOWED_DOMAINS = ['peps.python.org']
